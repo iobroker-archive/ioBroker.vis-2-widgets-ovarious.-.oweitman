@@ -1,0 +1,55 @@
+{
+    "common": {
+        "name": "vis-2-widgets-ovarious",
+        "version": "0.0.1",
+        "news": {},
+        "titleLang": {
+            "en": "Vis-2 widget ovarious"
+        },
+        "desc": {
+            "en": "Vis-2 widget ovarious"
+        },
+        "authors": ["oweitman <oweitman@gmx.de>"],
+        "keywords": ["vis-2", "widgets", "vis-2-widgets-ovarious"],
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
+        },
+        "tier": 3,
+        "platform": "Javascript/Node.js",
+        "icon": "vis-2-widgets-ovarious.png",
+        "extIcon": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-2-widgets-ovarious/main/admin/vis-2-widgets-ovarious.png",
+        "enabled": true,
+        "readme": "https://github.com/oweitman/ioBroker.vis-2-widgets-ovarious/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "none",
+        "nogit": true,
+        "singleton": true,
+        "onlyWWW": true,
+        "noConfig": true,
+        "adminUI": {
+            "config": "none"
+        },
+        "type": "visualization-widgets",
+        "connectionType": "cloud",
+        "dataSource": "poll",
+        "visWidgets": {
+            "vis2ovariousWidgets": {
+                "i18n": "component",
+                "name": "vis2ovariousWidgets",
+                "urlxx": "vis-2-widgets-ovarious/customWidgets.js",
+                "url": "http://localhost:4173/customWidgets.js",
+                "components": ["JSONTemplateWidget"]
+            }
+        },
+        "restartAdapters": ["vis-2"],
+        "dependencies": [
+            {
+                "js-controller": ">=5.0.17"
+            }
+        ]
+    },
+    "native": {},
+    "objects": [],
+    "instanceObjects": []
+}
