@@ -57,10 +57,30 @@
       }
     },
     "titleLang": {
-      "en": "Vis-2 widget ovarious"
+      "en": "Vis-2 widget ovarious",
+      "de": "Vis-2-Widget Eierstöcke",
+      "ru": "Виджет ВИЗ-2 разный",
+      "pt": "Widget Vis-2 ovário",
+      "nl": "Vis-2 widget eierstok",
+      "fr": "Vis-2 widget ovaire",
+      "it": "Widget Vis-2 ovarico",
+      "es": "Widget Vis-2 ovario",
+      "pl": "Widget Vis-2 jajnik",
+      "uk": "Віз-2 віджет яєчників",
+      "zh-cn": "Vis-2 小部件卵巢"
     },
     "desc": {
-      "en": "Vis-2 widget ovarious"
+      "en": "Vis-2 widget ovarious",
+      "de": "Vis-2-Widget Eierstöcke",
+      "ru": "Виджет ВИЗ-2 разный",
+      "pt": "Widget Vis-2 ovário",
+      "nl": "Vis-2 widget eierstok",
+      "fr": "Vis-2 widget ovaire",
+      "it": "Widget Vis-2 ovarico",
+      "es": "Widget Vis-2 ovario",
+      "pl": "Widget Vis-2 jajnik",
+      "uk": "Віз-2 віджет яєчників",
+      "zh-cn": "Vis-2 小部件卵巢"
     },
     "authors": [
       "oweitman <oweitman@gmx.de>"

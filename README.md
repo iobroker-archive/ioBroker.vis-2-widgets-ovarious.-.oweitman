@@ -9,7 +9,7 @@
 
 [![NPM](https://nodei.co/npm/iobroker.vis-2-widgets-ovarious.png?downloads=true)](https://nodei.co/npm/iobroker.vis-2-widgets-ovarious/)
 
-this adapter contains varoius vis-2 widgets.
+This adapter contains various vis-2 widgets.
 
 ok, actually, there is only one vis-2 widget, but some more are on my roadmap.
 
@@ -173,6 +173,7 @@ data.oneobject.attribute1 = 1 data.oneobject.attribute2 = 2
 	Placeholder for next versions:
 	### __WORK IN PROGRESS__
 -->
+
 ### 0.1.3 (2024-07-27)
 
 - add icon
