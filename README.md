@@ -173,6 +173,10 @@ data.oneobject.attribute1 = 1 data.oneobject.attribute2 = 2
 	Placeholder for next versions:
 	### __WORK IN PROGRESS__
 -->
+### __WORK IN PROGRESS__
+
+- add icon
+- add documentation
 
 ### 0.1.2 (2024-07-27)
 
