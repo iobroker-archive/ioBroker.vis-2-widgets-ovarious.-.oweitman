@@ -17,8 +17,7 @@ For a detailed description of the widgets and functionality see Adapter rssfeed.
 	Placeholder for next versions:
 	### __WORK IN PROGRESS__
 -->
-
-### **WORK IN PROGRESS**
+### 0.1.0 (2024-07-27)
 
 - improve link styling in the marquee widget
 
