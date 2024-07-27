@@ -1,11 +1,11 @@
-![Logo](admin/vis-2-widgets-rssfeed.png)
+![Logo](admin/vis-2-widgets-ovarious.png)
 
 # Vis 2 RSS Feed widgets
 
 ![Number of Installations](http://iobroker.live/badges/vis-2-widgets-rssfeed-installed.svg) ![Number of Installations](http://iobroker.live/badges/vis-2-widgets-rssfeed-stable.svg) [![NPM version](http://img.shields.io/npm/v/iobroker.vis-2-widgets-rssfeed.svg)](https://www.npmjs.com/package/iobroker.vis-2-widgets-rssfeed)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.vis-2-widgets-rssfeed.svg)](https://www.npmjs.com/package/iobroker.vis-2-widgets-rssfeed)
 
-[![NPM](https://nodei.co/npm/iobroker.vis-2-widgets-rssfeed.png?downloads=true)](https://nodei.co/npm/iobroker.vis-2-widgets-rssfeed/)
+[![NPM](https://nodei.co/npm/iobroker.vis-2-widgets-ovarious.png?downloads=true)](https://nodei.co/npm/iobroker.vis-2-widgets-rssfeed/)
 
 this adapter contains only the vis-2 widgets for the adapter rssfeed.
 
@@ -17,6 +17,11 @@ For a detailed description of the widgets and functionality see Adapter rssfeed.
 	Placeholder for next versions:
 	### __WORK IN PROGRESS__
 -->
+
+### **WORK IN PROGRESS**
+
+- prepare release
+
 ### 0.1.1 (2024-07-27)
 
 - fix widget addressing
