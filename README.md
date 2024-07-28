@@ -174,6 +174,10 @@ data.oneobject.attribute1 = 1 data.oneobject.attribute2 = 2
 	### __WORK IN PROGRESS__
 -->
 
+### **WORK IN PROGRESS**
+
+- fix things from adapter checker
+
 ### 0.1.3 (2024-07-27)
 
 - add icon
