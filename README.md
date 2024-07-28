@@ -173,6 +173,11 @@ data.oneobject.attribute1 = 1 data.oneobject.attribute2 = 2
 	Placeholder for next versions:
 	### __WORK IN PROGRESS__
 -->
+### 0.1.8 (2024-07-28)
+
+- improve icon
+- remove versions from io-package.json
+
 ### 0.1.7 (2024-07-28)
 
 - fix widget addressing
