@@ -11,3 +11,4 @@ tmp/
 .dev-server/
 .vscode/info.txt
 .vscode/secrets.txt
+.vscode/Recording*
