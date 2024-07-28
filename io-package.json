@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "vis-2-widgets-ovarious",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "news": {
+      "0.1.7": {
+        "en": "fix widget addressing",
+        "de": "widget-adressierung beheben",
+        "ru": "исправить виджет адрес",
+        "pt": "corrigir endereço do widget",
+        "nl": "widget adressering herstellen",
+        "fr": "correction de l'adresse du widget",
+        "it": "correzione dell'indirizzo del widget",
+        "es": "arreglar widget",
+        "pl": "naprawić adres widgetu",
+        "uk": "виправити адреси віджету",
+        "zh-cn": "固定部件地址"
+      },
       "0.1.6": {
         "en": "fix widget addressing",
         "de": "widget-adressierung beheben",
@@ -128,8 +141,8 @@
       "vis2ovariousWidgets": {
         "i18n": "component",
         "name": "vis2ovariousWidgets",
-        "urlxx": "vis-2-widgets-ovarious/customWidgets.js",
-        "url": "http://localhost:4173/customWidgets.js",
+        "url": "vis-2-widgets-ovarious/customWidgets.js",
+        "urlxx": "http://localhost:4173/customWidgets.js",
         "components": [
           "JSONTemplateWidget"
         ]
