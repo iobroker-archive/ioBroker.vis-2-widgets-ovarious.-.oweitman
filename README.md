@@ -173,8 +173,7 @@ data.oneobject.attribute1 = 1 data.oneobject.attribute2 = 2
 	Placeholder for next versions:
 	### __WORK IN PROGRESS__
 -->
-
-### **WORK IN PROGRESS**
+### 0.1.4 (2024-07-28)
 
 - fix things from adapter checker
 
