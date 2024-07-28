@@ -1,125 +1,114 @@
 {
-  "common": {
-    "name": "vis-2-widgets-ovarious",
-    "version": "0.1.4",
-    "news": {
-      "0.1.4": {
-        "en": "fix things from adapter checker",
-        "de": "dinge von adapter checker beheben",
-        "ru": "исправить вещи из адаптера",
-        "pt": "corrigir coisas do verificador do adaptador",
-        "nl": "fix dingen van adapter checker",
-        "fr": "réparer les choses de l'adaptateur checker",
-        "it": "risolvere le cose da adattatore checker",
-        "es": "arreglar las cosas desde el adaptador",
-        "pl": "naprawić rzeczy z sprawdzania adaptera",
-        "uk": "виправити речі з адаптера",
-        "zh-cn": "从适配器检查器中校正一些东西"
-      },
-      "0.1.3": {
-        "en": "add icon\nadd documentation",
-        "de": "icon hinzufügen\ndokumentation hinzufügen",
-        "ru": "добавить\nдобавить документацию",
-        "pt": "adicionar ícone\nadicionar documentação",
-        "nl": "pictogram toevoegen\ndocumentatie toevoegen",
-        "fr": "ajouter l'icône\najouter la documentation",
-        "it": "aggiungere icona\naggiungere documentazione",
-        "es": "añadir icono\nañadir documentación",
-        "pl": "dodaj ikonę\ndodać dokumentację",
-        "uk": "додати іконку\nдокументи",
-        "zh-cn": "添加图标\n添加文档"
-      },
-      "0.1.2": {
-        "en": "prepare release",
-        "de": "veröffentlichung vorbereiten",
-        "ru": "подготовка к выпуску",
-        "pt": "preparar a liberação",
-        "nl": "de release voorbereiden",
-        "fr": "préparer la libération",
-        "it": "preparare il rilascio",
-        "es": "preparar la liberación",
-        "pl": "przygotować zwolnienie",
-        "uk": "підготовка релізу",
-        "zh-cn": "准备释放"
-      }
-    },
-    "titleLang": {
-      "en": "Vis-2 widget ovarious",
-      "de": "Vis-2-Widget Eierstöcke",
-      "ru": "Виджет ВИЗ-2 разный",
-      "pt": "Widget Vis-2 ovário",
-      "nl": "Vis-2 widget eierstok",
-      "fr": "Vis-2 widget ovaire",
-      "it": "Widget Vis-2 ovarico",
-      "es": "Widget Vis-2 ovario",
-      "pl": "Widget Vis-2 jajnik",
-      "uk": "Віз-2 віджет яєчників",
-      "zh-cn": "Vis-2 小部件卵巢"
-    },
-    "desc": {
-      "en": "Vis-2 widget ovarious",
-      "de": "Vis-2-Widget Eierstöcke",
-      "ru": "Виджет ВИЗ-2 разный",
-      "pt": "Widget Vis-2 ovário",
-      "nl": "Vis-2 widget eierstok",
-      "fr": "Vis-2 widget ovaire",
-      "it": "Widget Vis-2 ovarico",
-      "es": "Widget Vis-2 ovario",
-      "pl": "Widget Vis-2 jajnik",
-      "uk": "Віз-2 віджет яєчників",
-      "zh-cn": "Vis-2 小部件卵巢"
-    },
-    "authors": [
-      "oweitman <oweitman@gmx.de>"
-    ],
-    "keywords": [
-      "vis-2",
-      "widgets",
-      "vis-2-widgets-ovarious"
-    ],
-    "licenseInformation": {
-      "type": "free",
-      "license": "MIT"
-    },
-    "tier": 3,
-    "platform": "Javascript/Node.js",
-    "icon": "vis-2-widgets-ovarious.png",
-    "extIcon": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-2-widgets-ovarious/main/admin/vis-2-widgets-ovarious.png",
-    "enabled": true,
-    "readme": "https://github.com/oweitman/ioBroker.vis-2-widgets-ovarious/blob/main/README.md",
-    "loglevel": "info",
-    "mode": "none",
-    "nogit": true,
-    "singleton": true,
-    "onlyWWW": true,
-    "noConfig": true,
-    "adminUI": {
-      "config": "none"
-    },
-    "type": "visualization-widgets",
-    "connectionType": "cloud",
-    "dataSource": "poll",
-    "visWidgets": {
-      "vis2ovariousWidgets": {
-        "i18n": "component",
-        "name": "vis2ovariousWidgets",
-        "url": "vis-2-widgets-ovarious/customWidgets.js",
-        "urlxx": "http://localhost:4173/customWidgets.js",
-        "components": [
-          "JSONTemplateWidget"
+    "common": {
+        "name": "vis-2-widgets-ovarious",
+        "version": "0.1.4",
+        "news": {
+            "0.1.4": {
+                "en": "fix things from adapter checker",
+                "de": "dinge von adapter checker beheben",
+                "ru": "исправить вещи из адаптера",
+                "pt": "corrigir coisas do verificador do adaptador",
+                "nl": "fix dingen van adapter checker",
+                "fr": "réparer les choses de l'adaptateur checker",
+                "it": "risolvere le cose da adattatore checker",
+                "es": "arreglar las cosas desde el adaptador",
+                "pl": "naprawić rzeczy z sprawdzania adaptera",
+                "uk": "виправити речі з адаптера",
+                "zh-cn": "从适配器检查器中校正一些东西"
+            },
+            "0.1.3": {
+                "en": "add icon\nadd documentation",
+                "de": "icon hinzufügen\ndokumentation hinzufügen",
+                "ru": "добавить\nдобавить документацию",
+                "pt": "adicionar ícone\nadicionar documentação",
+                "nl": "pictogram toevoegen\ndocumentatie toevoegen",
+                "fr": "ajouter l'icône\najouter la documentation",
+                "it": "aggiungere icona\naggiungere documentazione",
+                "es": "añadir icono\nañadir documentación",
+                "pl": "dodaj ikonę\ndodać dokumentację",
+                "uk": "додати іконку\nдокументи",
+                "zh-cn": "添加图标\n添加文档"
+            },
+            "0.1.2": {
+                "en": "prepare release",
+                "de": "veröffentlichung vorbereiten",
+                "ru": "подготовка к выпуску",
+                "pt": "preparar a liberação",
+                "nl": "de release voorbereiden",
+                "fr": "préparer la libération",
+                "it": "preparare il rilascio",
+                "es": "preparar la liberación",
+                "pl": "przygotować zwolnienie",
+                "uk": "підготовка релізу",
+                "zh-cn": "准备释放"
+            }
+        },
+        "titleLang": {
+            "en": "Vis-2 widget ovarious",
+            "de": "Vis-2-Widget Eierstöcke",
+            "ru": "Виджет ВИЗ-2 разный",
+            "pt": "Widget Vis-2 ovário",
+            "nl": "Vis-2 widget eierstok",
+            "fr": "Vis-2 widget ovaire",
+            "it": "Widget Vis-2 ovarico",
+            "es": "Widget Vis-2 ovario",
+            "pl": "Widget Vis-2 jajnik",
+            "uk": "Віз-2 віджет яєчників",
+            "zh-cn": "Vis-2 小部件卵巢"
+        },
+        "desc": {
+            "en": "Vis-2 widget ovarious",
+            "de": "Vis-2-Widget Eierstöcke",
+            "ru": "Виджет ВИЗ-2 разный",
+            "pt": "Widget Vis-2 ovário",
+            "nl": "Vis-2 widget eierstok",
+            "fr": "Vis-2 widget ovaire",
+            "it": "Widget Vis-2 ovarico",
+            "es": "Widget Vis-2 ovario",
+            "pl": "Widget Vis-2 jajnik",
+            "uk": "Віз-2 віджет яєчників",
+            "zh-cn": "Vis-2 小部件卵巢"
+        },
+        "authors": ["oweitman <oweitman@gmx.de>"],
+        "keywords": ["vis-2", "widgets", "vis-2-widgets-ovarious"],
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
+        },
+        "tier": 3,
+        "platform": "Javascript/Node.js",
+        "icon": "vis-2-widgets-ovarious.png",
+        "extIcon": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-2-widgets-ovarious/main/admin/vis-2-widgets-ovarious.png",
+        "enabled": true,
+        "readme": "https://github.com/oweitman/ioBroker.vis-2-widgets-ovarious/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "none",
+        "nogit": true,
+        "singleton": true,
+        "onlyWWW": true,
+        "adminUI": {
+            "config": "none"
+        },
+        "type": "visualization-widgets",
+        "connectionType": "cloud",
+        "dataSource": "poll",
+        "visWidgets": {
+            "vis2ovariousWidgets": {
+                "i18n": "component",
+                "name": "vis2ovariousWidgets",
+                "url": "vis-2-widgets-ovarious/customWidgets.js",
+                "urlxx": "http://localhost:4173/customWidgets.js",
+                "components": ["JSONTemplateWidget"]
+            }
+        },
+        "restartAdapters": ["vis-2"],
+        "dependencies": [
+            {
+                "js-controller": ">=5.0.17"
+            }
         ]
-      }
     },
-    "restartAdapters": [
-      "vis-2"
-    ],
-    "dependencies": [
-      {
-        "js-controller": ">=5.0.17"
-      }
-    ]
-  },
-  "native": {},
-  "objects": [],
-  "instanceObjects": []
+    "native": {},
+    "objects": [],
+    "instanceObjects": []
 }
