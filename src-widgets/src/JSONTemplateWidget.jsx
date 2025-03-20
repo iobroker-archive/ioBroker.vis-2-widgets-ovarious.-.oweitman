@@ -10,6 +10,10 @@ import InnerHtml from './Components/InnerHTML.jsx';
 const ejs = require('ejs');
 
 class JSONTemplateWidget extends (window.visRxWidget || VisRxWidget) {
+    constructor(props) {
+        super(props);
+        this.renderText = ' ';
+    }
     static getWidgetInfo() {
         return {
             id: 'tplJSONTemplateWidget',
@@ -95,7 +99,8 @@ class JSONTemplateWidget extends (window.visRxWidget || VisRxWidget) {
     }
 
     // eslint-disable-next-line class-methods-use-this
-    propertiesUpdate() {
+    async propertiesUpdate() {
+        debugger;
         // Widget has 3 important states
         // 1. this.state.values - contains all state values, that are used in widget (automatically collected from widget info).
         //                        So you can use `this.state.values[this.state.rxData.oid + '.val']` to get value of state with id this.state.rxData.oid
@@ -103,6 +108,35 @@ class JSONTemplateWidget extends (window.visRxWidget || VisRxWidget) {
         //                        then this.state.rxData.type will have state value of `system.adapter.admin.0.alive`
         // 3. this.state.rxStyle - contains all widget styles with replaced bindings. E.g. if this.state.styles.width is `{javascript.0.width}px`,
         //                        then this.state.rxData.type will have state value of `javascript.0.width` + 'px
+        let oiddata, data, datapoints, template, dpCount;
+        try {
+            oiddata = JSON.parse(this.state.values[`${this.state.rxData.oid}.val`] || '{}');
+            data = this.state.data || {};
+            datapoints = [];
+            dpCount = data.dpcount ? data.dpcount : 1;
+            for (let i = 1; i <= dpCount; i++) {
+                if (data['datapoint-oid' + i]) {
+                    datapoints[data['datapoint-oid' + i]] = this.state.values[`${data['datapoint-oid' + i]}.val`];
+                }
+            }
+
+            template = data?.template || '';
+            this.renderText =
+                (await ejs.render(
+                    template,
+                    {
+                        widgetid: this.props.id,
+                        data: oiddata,
+                        dp: datapoints,
+                        style: this.props.style,
+                    },
+                    { async: true },
+                )) + ' ';
+        } catch (e) {
+            this.renderText = this.escapeHTML(e.message).replace(/(?:\r\n|\r|\n)/g, '<br>');
+            this.renderText = this.renderText.replace(/ /gm, '&nbsp;');
+            this.renderText = `<code style="color:red;">${this.renderText}</code>`;
+        }
     }
 
     componentDidMount() {
@@ -141,28 +175,28 @@ class JSONTemplateWidget extends (window.visRxWidget || VisRxWidget) {
 
     renderWidgetBody(props) {
         super.renderWidgetBody(props);
-        let oiddata, data, datapoints, template, dpCount;
-        let text;
-        try {
-            oiddata = JSON.parse(this.state.values[`${this.state.rxData.oid}.val`] || '{}');
-            data = props.widget.data || {};
-            datapoints = [];
-            dpCount = data.dpcount ? data.dpcount : 1;
-            for (let i = 1; i <= dpCount; i++) {
-                if (data['datapoint-oid' + i]) {
-                    datapoints[data['datapoint-oid' + i]] = this.state.values[`${data['datapoint-oid' + i]}.val`];
-                }
-            }
+        // let oiddata, data, datapoints, template, dpCount;
+        // let text;
+        // try {
+        //     oiddata = JSON.parse(this.state.values[`${this.state.rxData.oid}.val`] || '{}');
+        //     data = props.widget.data || {};
+        //     datapoints = [];
+        //     dpCount = data.dpcount ? data.dpcount : 1;
+        //     for (let i = 1; i <= dpCount; i++) {
+        //         if (data['datapoint-oid' + i]) {
+        //             datapoints[data['datapoint-oid' + i]] = this.state.values[`${data['datapoint-oid' + i]}.val`];
+        //         }
+        //     }
 
-            template = data?.template || '';
-            text =
-                ejs.render(template, { widgetid: props.id, data: oiddata, dp: datapoints, style: props.style }) + ' ';
-        } catch (e) {
-            text = this.escapeHTML(e.message).replace(/(?:\r\n|\r|\n)/g, '<br>');
-            text = text.replace(/ /gm, '&nbsp;');
-            text = `<code style="color:red;">${text}</code>`;
-        }
-        return <InnerHtml html={text} />;
+        //     template = data?.template || '';
+        //     text = text =
+        //         ejs.render(template, { widgetid: props.id, data: oiddata, dp: datapoints, style: props.style }) + ' ';
+        // } catch (e) {
+        //     text = this.escapeHTML(e.message).replace(/(?:\r\n|\r|\n)/g, '<br>');
+        //     text = text.replace(/ /gm, '&nbsp;');
+        //     text = `<code style="color:red;">${text}</code>`;
+        // }
+        return <InnerHtml html={this.renderText || ' '} />;
     }
 }
 JSONTemplateWidget.propTypes = {
@@ -175,17 +209,40 @@ JSONTemplateWidget.propTypes = {
 
 export default JSONTemplateWidget;
 
-//<code>    <% // debugger; %>a <% a=11111123 %><br>data.propnum <%= data.propnum %><br>data.propstr <%= data.propstr %><br><%= a %><br>dp0 <%= dp[0] %><br>dp1 <%= dp[1] %><br></code>
-
-/* 
+/*
+normal test
 <code>
 
-<% // debugger; %>
+<%  //debugger; %>
 a <% a=11111123 %><br>
 data.propnum <%= data.propnum %><br>
 data.propstr <%= data.propstr %><br>
 <%= a %><br>
 dp0 <%= dp["0_userdata.0.dp1"] %><br>
-dp1 <%= dp[1] %><br>
+dp1 <%= dp["0_userdata.0.dp2"] %><br>
 </code>
- */
+*/
+
+/*
+Async test
+           <%
+         
+            debugger;
+            req = await sendToAsync("admin.0","selectSendTo");
+            console.log(JSON.stringify(req));
+            %>
+            <%- JSON.stringify(req) %>
+            <%
+            async function sendToAsync(instance, command, sendData) {
+                return new Promise((resolve, reject) => {
+                    try {
+                        vis.conn.sendTo(instance, command, sendData, function (receiveData) {
+                            resolve(receiveData);
+                        });
+                    } catch (error) {
+                        reject(error);
+                    }
+                });
+            }
+            %>
+*/
